@@ -114,7 +114,9 @@ workbox.precaching.precacheAndRoute([{
         url: '/images/icons/icon-512x512.png',
         revision: '1'
     },
-]);
+], {
+    ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
